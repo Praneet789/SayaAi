@@ -1,0 +1,153 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff; /* Light green background */
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Floating Assistant Button */
+.floating-assistant {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2d2e60; /* Dark Green */
+  color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 28px;
+  border: none;
+}
+
+.floating-assistant:hover {
+  background: #2d2e60;
+}
+
+/* Chatbox */
+.chatbox {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background: #2d2e60; /* Light Green */
+  width: 420px; /* Wider */
+  height: 600px; /* Taller */
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chatbox.open {
+  display: flex;
+}
+
+.card {
+  background: #ffffff; /* Softer green */
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 20px; /* Bigger Text */
+  font-weight: bold;
+  color: #2d2e60; /* Dark Green */
+}
+
+.highlight {
+  color: #2d2e60;
+  font-weight: bold;
+}
+
+.saya-img {
+  width: 120px; /* Bigger */
+  height: 120px;
+  border-radius: 50%;
+  margin: 15px 0;
+}
+
+.listening-text {
+  font-size: 16px; /* Bigger */
+  color: #2d2e60;
+  font-weight: bold;
+  margin-bottom: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.listening-text.active {
+  opacity: 1;
+}
+
+.response-box,
+.input-box {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid #2d2e60;
+  font-size: 16px;
+  margin-bottom: 12px;
+  background: #ffffff; /* Light Green */
+}
+
+.response-box {
+  height: 120px; /* Bigger Response Area */
+}
+
+.input-box {
+  height: 50px;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+}
+
+.ask-button,
+.stop-button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease-in-out;
+}
+
+.ask-button {
+  background: #2d2e60;
+  color: white;
+}
+
+.ask-button:hover {
+  background: #2d2e60;
+}
+
+.stop-button {
+  background: #d32f2f;
+  color: white;
+}
+
+.stop-button:hover {
+  background: #b71c1c;
+}
